@@ -9,7 +9,8 @@ import {
   FormControlLabel,
 } from "@material-ui/core";
 import ButtonAppBar from "./NavBar.js";
-
+import LineChart from "./lineChart";
+import PieChart from "./pieChart";
 // I have installed material ui core and material ui icons from material-ui.com to include material ui features in this react app. these are installed separately in every rect app in order to use it. These are not installed globally as we may use bootstrap or some other thing in our app.
 // for reference on material ui go to https://material-ui.com
 
@@ -56,7 +57,7 @@ function App() {
         <form className={classes.root} noValidate autoComplete="off">
           <TextField
             id="filled-basic"
-            label="Enter e-mail:"
+            label="E-mail/username:"
             variant="filled"
             className={classes.input}
           />
@@ -89,11 +90,14 @@ function App() {
             variant="contained"
             color="primary"
             className={classes.button}
+            onClick={() => {}}
           >
             LOGIN
           </Button>
         </form>
       </Paper>
+      <LineChart />
+      <PieChart />
     </div>
   );
 }
